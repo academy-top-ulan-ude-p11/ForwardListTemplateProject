@@ -55,6 +55,9 @@ T ForwardList<T>::Delete()
 template <class T>
 T ForwardList<T>::Remove(int index)
 {
+	if (size <= 0)
+		throw 1;
+
 	if (index >= size - 1)
 		return Delete();
 
